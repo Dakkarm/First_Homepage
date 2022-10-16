@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css? family=Poppins : 200, 300, 400,500,600,700, 800, 900& display=swap');
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : 'Poppins', sans-serif;
+}
+.socialMedia
+{   
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    min-height : 100vh;
+    transition: 0.5s;
+}
+.sci
+{
+    position : absolute;
+    display : flex;
+}
+.bottom
+{
+    height: 0%;
+}
+.top
+{
+    height: 30%;
+}
+.sci li
+{
+    List-style : none;
+}
+.sci li::before
+{
+    content : attr(data-text);
+    position : absolute;
+    top : 3cm;
+    Left : 50%;
+    transform : translate(-50%, calc(-30% + 90px));
+    font-size : 14vw;
+    pointer-events : none;
+    font-weight : 700;
+    transition : 0.5s;
+    opacity : 0;
+    color: #fff;
+} 
+.top li:hover::before
+{ 
+    opacity : 0.8;
+    transform : translate(-50%,calc(-50% + 210px));
+}
+.bottom li:hover::before
+{ 
+    opacity : 0.8;
+    transform : translate(-50%,calc(-50% + 100px));
+}
+.sci li a
+{
+    position : relative;
+    display : inline-block;
+    width : 1.6em;
+    height : 1.6em;
+    background : #fff;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    color : #333;
+    border-radius : 10px;
+    text-decoration : none;
+    margin: 10px;
+    font-size : 3.3em;
+    transform-style : preserve-3d;
+    perspective : 500px; 
+    box-shadow : 0 25px 35px rgba(0,0,0,0.1);
+    transition: background 0.25s;
+}
+.js-tilt-glare
+{
+    border-radius : 10px;
+}
+.sci li a:hover.amazon
+{ 
+    background : #FF9900;
+} 
+.sci li a:hover.discord
+{ 
+    background : #5865F2;
+} 
+.sci li a:hover.youtube
+{
+    background : #ff0000;
+}
+.sci li a:hover.whatsapp
+{
+    background : #06D755;
+}
+.sci li a:hover.instagram
+{
+    background : #e4405f;
+}
+.sci li a:hover.paypal
+{
+    background : #001A69;
+}
+.sci li a:hover.telegram
+{ 
+    background : #30A3E6;
+} 
+.sci li a:hover.twitter
+{ 
+    background : #1D9BF0;
+} 
+.sci li a:hover.twitch
+{
+    background : #A970FF;
+}
+.sci li a:hover.reddit
+{
+    background : #FF5414;
+}
+.sci li a:hover.tiktok
+{
+    background : #000000;
+}
+.sci li a:hover.raspberrypi
+{ 
+    background : #CD2355;
+}
+.sci li a:hover.github
+{ 
+    background : #24292F;
+} 
+.sci li a:hover.fritzbox
+{ 
+    background : #FFE500;
+}
+.sci li a:hover.calcio
+{ 
+    background : #0F417C;
+}
+.sci li a:hover.mail
+{ 
+    background : #CA3A2D;
+} 
+.sci li a .fab
+{
+    transition: 0.5s;
+    pointer-events: none;
+}
+.sci li a:hover .fab
+{
+    color: #fff;
+    transform: scale(1.75) translateZ(50px);
+}
+.sci li a .fas
+{
+    transition: 0.5s;
+    pointer-events: none;
+}
+.sci li a:hover .fas
+{
+    color: #fff;
+    transform: scale(1.75) translateZ(50px);
+}

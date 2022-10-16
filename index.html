@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <section class="socialMedia">
+            <ul class="sci top">
+                <li data-text="Amazon" data-color="#FF9900">
+                    <a href="https://www.amazon.it/" class="amazon"><i class="fab fa-amazon"></i></a>
+                </li>
+                <li data-text="Discord" data-color="#5865F2">
+                    <a href="https://discord.com/channels/@me" class="discord"><i class="fab fa-discord"></i></a>
+                </li>
+                <li data-text="YouTube" data-color="#ff0000">
+                    <a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li data-text="Whatsapp" data-color="#06D755">
+                    <a href="https://web.whatsapp.com/" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li data-text="Instagram" data-color="#e4405f">
+                    <a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li data-text="Paypal" data-color="#001A69">
+                    <a href="https://www.paypal.com/myaccount/summary" class="paypal"><i class="fab fa-paypal"></i></a>
+                </li>
+                <li data-text="Telegram" data-color="#30A3E6">
+                    <a href="https://web.telegram.org/z/" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+                </li>
+                <li data-text="Email" data-color="#CA3A2D">
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="mail"><i class="fas fa-envelope-open-text"></i></a>
+                </li>
+            </ul>
+            <ul class="sci bottom">
+                <li data-text="Twitter" data-color="#1D9BF0">
+                    <a href="https://twitter.com/home" class="twitter"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li data-text="Twitch" data-color="#A970FF">
+                    <a href="https://www.twitch.tv/" class="twitch"><i class="fab fa-twitch"></i></a>
+                </li>
+                <li data-text="Reddit" data-color="#FF5414">
+                    <a href="https://www.reddit.com/" class="reddit"><i class="fab fa-reddit"></i></a>
+                </li>
+                <li data-text="TikTok" data-color="#000000">
+                    <a href="https://www.tiktok.com/" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                </li>
+                <li data-text="RaspberryPi" data-color="#CD2355">
+                    <a href="http://192.168.178.31/admin/index.php" class="raspberrypi"><i class="fab fa-raspberry-pi"></i></a>
+                </li>
+                <li data-text="Github" data-color="#24292F">
+                    <a href="https://github.com/" class="github"><i class="fab fa-github"></i></a>
+                </li>
+                <li data-text="FritzBox" data-color="#FFE500">
+                    <a href="http://fritz.box/" class="fritzbox"><i class="fas fa-wifi"></i></a>
+                </li>
+                <li data-text="Football" data-color="#0F417C">
+                    <a href="http://www.beinmatch.me/" class="calcio"><i class="fas fa-futbol"></i></a>
+                </li>
+            </ul>
+        </section>
+        <script src="vanilla-tilt.min.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+		        max: 30,
+		        speed: 400,
+                glare: true,
+                "max-glare": 1
+            });
+
+            let list = document.querySelectorAll('.sci li');
+            let bg = document.querySelector('.socialMedia');
+            list.forEach(elements => {
+                elements.addEventListener('mouseenter', function (event){
+                    let color = event.target.getAttribute ('data-color');
+                    bg.style.backgroundColor = color;
+                })
+                elements.addEventListener('mouseleave', function (event){
+                    bg.style.backgroundColor = '#fff';
+                })
+            })
+        </script>
+
+    </body>
+</html>
